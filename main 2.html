@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width"/>
+    <title>Flexbox в CSS3</title>
+    <style>
+div{vertical-aligm: baseline;}
+        *{
+            box-sizing^ border-box;
+        }
+        html, body {
+            padding: 0;
+            margin: 0;
+             }
+        body {
+            color:#000;
+            font-size: 1.1em;
+            display: flex;
+            flex-direction: column;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+        article {
+            background-color:beige;
+            flex: 2 2 12em;
+            
+        }
+        nav, aside {
+            flex: 1;
+	    padding: 10px 10px 10px 10px;
+            background-color: beige;
+        }
+        nav {
+            order: -1;
+        }
+        header{
+            flex: 0 0 5em;
+            background-color: #FFFF;
+	    text-align: center;
+ 	}
+footer {
+            flex: 0 0 5em;
+            background-color: rgb(241, 241, 142);
+	    text-align: center;
+        }
+ header h1 {
+        font-size: 24px;
+        text-transform: uppercase;
+        font-weight: blod;
+        padding: 30px 30px 30px 10px;
+        clear: both;
+        text-align: center;
+        text-shadow: 5px 4px 3px #666;
+    }
+nav0 {
+        background-color: rgb(252, 244, 175)
+        border-top : 1px soild #888
+        border-bottom: 1px soild #888
+    }
+    nav0 ul:after {
+        content: " ";
+        display:table;
+        clear:both;
+    }
+    nav0 li{
+        float: left;
+        list-style: none;
+    }
+    nav0 a {
+        display: block;
+        color: black;
+        padding: 10px 25px;
+        text-decoration: none;
+        border-right: 3px solid rgb(252, 137, 129);
+        font-size: xx-large;
+    }
+    nav0 li:last-child a {
+        border-child: none;
+    }
+        @media screen and (min-width: 600px) {
+
+            body{
+                min-height: 100vh;
+            }
+            main {
+                flex-direction: row;
+                min-height: 100%;
+                flex: 1 1 auto;
+            }
+        }
+    </style>
+</head>
+ <body>
+    <header>
+        <h1>Картинная галерея Анастасии</h1>
+    </header>
+<nav0>
+    <ul>
+        <li><a href="main.html">Главная</a></li>
+        <li><a href="Photo.html">Фотографии</a></li>
+    </ul>
+</nav0>
+
+    <main>
+        <article>
+            <div id="main">
+        <p>Это основной блок</p>
+        <p>Это основной блок</p>
+        <p>Это основной блок</p>
+        <p>Это основной блок</p>
+        <p>Это основной блок</p>
+        <p>Это основной блок</p>
+    </div>
+</article>
+        <nav>
+            <ul>
+            <li><a href="main.html">Главная</a></li>
+            <li><a href="Photo.html">Фотографии</a></li>    
+        </ul>
+        </nav>
+        <aside>
+            <p>Правый сайдбар с новостями о работе</p>
+        </aside>
+    </main>
+    <footer>
+        <p>Это подвал с копирайтом</p>
+    </footer>
+ </body>
+</html>
